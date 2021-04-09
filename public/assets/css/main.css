@@ -1,0 +1,64 @@
+@import url(externos/dist/css/bootstrap.min.css);
+@import url(docs.css);
+@import url(comun.css);
+@import url(menu.css);
+<style>
+
+
+.site-wrapper {
+  min-height: 100%;
+	height: auto;
+	margin: 0 auto -60px;
+	padding: 0 0 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: -webkit-calc(100% - 60px);
+  width:    -moz-calc(100% - 60px);
+  width: 		 calc(100% - 60px); /* adjust left padding*/
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #fff;
+}
+
+.logo{
+  height: 80px;
+  position: absolute;
+  margin-top: 10px;
+}
+
+/*forms */
+.form-control {
+  border-radius:0px;
+  box-shadow: none;
+  border:1px solid #ccc;
+  border-radius:3px;
+}
+.form-horizontal .control-label {
+  color:#000;
+  font-weight:400;
+}
+.form-horizontal .control-label {
+  margin-bottom:10px;
+  font-size:14px;
+  line-height: 14px;
+}
+.form-control::-moz-placeholder {
+  color:#666;
+}
+
+tr.seleccionado, tr.seleccionado:hover{
+	background-color: #bbbbff !important;
+}
+
+.fixed-table-container tbody .selected td{
+	background-color: #bbbbff !important;
+}
+
+.seleccionable{
+	cursor: pointer !important;
+}
+
+</style>

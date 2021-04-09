@@ -1,0 +1,212 @@
+.site-wrapper {
+	min-height: calc(100vh - 100px);
+}
+
+.es_movil {
+	z-index: 0
+}
+
+@media (max-width: 1024px) {
+	.es_movil {
+		z-index: 1;
+	}
+	body {
+		padding-left: 0px;
+	}
+	.cabecera {
+		margin-left: 75px;
+	}
+	.escuela {
+		font-size: 16px;
+	}
+	.es_movil_main_menu {
+		width: 0px!important;
+	}
+	.sistema_nombre {
+		font-size: 14px;
+		margin-top: 0px;
+	}
+}
+
+.grow_menu {
+  animation: grow_menu_animation 0.5s forwards;
+}
+
+.shrink_menu {
+  animation: shrink_menu_animation 0.5s forwards;
+
+}
+
+@keyframes grow_menu_animation {
+  from {
+    width: 0px;
+  }
+
+  to {
+   	width: 300px;
+  }
+}
+@keyframes shrink_menu_animation {
+  from {
+    width: 300px;
+  }
+
+  to {
+   	width: 0px;
+  }
+}
+
+.notify_label {
+    position: absolute;
+    left: 30px;
+    border-radius: 30%;
+}
+
+.w-75 {
+	width: 75%!important;
+}
+
+.w-100 {
+	width: 100%!important;
+}
+
+.my-0 {
+  margin-top: ($spacer * .25) !important;
+  margin-botoom: ($spacer * .25) !important;
+}
+
+.my-1 {
+  margin-top: ($spacer * .25) !important;
+  margin-botoom: ($spacer * .25) !important;
+}
+
+.my-2 {
+  margin-top: ($spacer * .25) !important;
+  margin-botoom: ($spacer * .25) !important;
+}
+
+.my-3 {
+  margin-top: ($spacer * .25) !important;
+  margin-botoom: ($spacer * .25) !important;
+}
+
+ .tiempo_estimado_card {
+	max-width: 30vw;
+	max-height: 35vh;
+
+    -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+    border-radius:5px;
+}
+
+.tiempo_estimado_container_div {
+	margin-top: 5vh;
+}
+
+#header_panel_tiempo_estimado_card {
+	background-color: rgba(55,0,151,0.5);
+    font-weight: bold;
+    color: white;
+}
+
+.mayusculas{
+	text-transform: uppercase;
+}
+
+.warning{
+	background-color: rgb(241, 166, 49) !important;
+}
+
+#reportes_grid_content {
+	max-height: 80vh;
+	overflow-y: auto;
+}
+
+.separador{
+    height: 1px;
+    width: 95%;
+    background-color:#ccc;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+tr.seleccionado, tr.seleccionado:hover{
+	background-color: #bbbbff !important;
+}
+
+.fixed-table-container tbody .selected td{
+	background-color: #bbbbff !important;
+}
+
+.seleccionable{
+	cursor: pointer !important;
+}
+.margin-top{
+	margin-top:10px;
+}
+
+.input-group-addon > .glyphicon-calendar{
+	cursor: pointer;
+}
+
+.input-gpo-gasto, .input-subsubcta, .input-programa{
+	cursor: pointer;
+}
+.modal-content.col-sm-9, .modal-content.col-md-9{
+	padding:0px !important;
+}
+.no-padding {
+    padding: 10px 0px 0px 0px;
+}
+#divBntAutorizacionRemAm button, #ptsf-modal-footer-consultar button, #ptexterno-acciones-autorizacion button, #ptcf-modal-footer-consultar button, #divBtnAutorizar button, #autorizacion-sg-btns button, #autorizacion-am-btns button, #autorizacion-ot-btns button, #modalConsultaAG .modal-footer button{
+	width:100px;
+}
+
+.select2-drop.select2-display-none.select2-drop-active,
+.select2-drop.select2-display-none.select2-with-searchbox.select2-drop-active{
+	min-width:auto !important;
+}
+
+.spinner {
+  margin-top: 2em;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #333;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}

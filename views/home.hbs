@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/css/externos/dist/js/bootstrap.min.js"></script>
+	<script src="assets/js/create_account.js"></script>
+	<link rel="stylesheet" href="./assets/css/main.css" />
+</head>
+<body>
+	<div class="site-wrapper">
+		<div class="container-fluid">
+			<!-- header -->
+			<div id="login_header">
+				<div class="text-center">
+					<img class="logo" src= "../assets/images/background.jpg" alt="ricky and morty" style="position: relative;">
+					<div class="">
+						<h1 class="escuela">Proyecto Fender</h1>
+						<p class="">RICK AND MORTY API</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<form class="form-signin" th:action="@{/j_spring_security_check}" method="post">
+						<div class="title text-center">
+							<h3>Acceso usuarios</h3>
+						</div>
+						<label for="inputEmail" class="sr-only">Direcci&oacute;n de correo</label> <input type="email" name='j_username' id="inputEmail" class="form-control" placeholder="Direcci&oacute;n de correo" required="required"> <label for="inputPassword" class="sr-only">Contrase&ntilde;a</label>
+						<input type="password" name='j_password' id="inputPassword" class="form-control" placeholder="Contrase&ntilde;a" required="required">
+						<div class="checkbox"></div>
+						<button class="btn btn-success btn-block" type="submit">Iniciar sesi&oacute;n</button>
+					</form>
+
+					<div class="clearfix"></div>
+					<div class="text-center">
+						<p>
+							<a data-toggle="modal" data-target="#myModal" class="text-center">&iquest;No tienes cuenta? Favor de crear una</a>
+						</p>
+					</div>
+					<div class="clearfix"></div>
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<h3 class="modal-title title text-center" id="">Recuperar Contrase&ntilde;a</h3>
+								</div>
+								<div class="modal-body">
+									<form class="form" id="idRecuperarContrasena">
+										<div class="form-group">
+											<label for="inputEmail1" class="col-lg-4 control-label">Ingresa tu correo</label>
+											<div class="col-lg-6">
+												<input type="email" class="validate[required,custom[email] form-control" id="idCorreoElectronico" placeholder="correo@uabc.edu.mx" data-prompt-position="bottomLeft">
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button type="button" id="btnRecuperarContrasena" class="btn btn-default">Continuar</button>
+								</div>
+							</div>
+							<!-- /.modal-content -->
+						</div>
+						<!-- /.modal-dialog -->
+					</div>
+					<!-- /.modal -->
+				</div>
+			</div>
+
+			<div class="center-block text-center">
+				<a href="#"><button class="btn btn-info" id="btn_register">Register</button></a>
+				<div class="col-lg-12 text-center"></div>
+			</div>
+
+			<!-- MODAL USUARIO EXTERNOS -->
+			<div class="modal fade" id="register_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							<h3 class="modal-title title text-center" id="">Usuarios externos</h3>
+						</div>
+						<div class="modal-body">
+							<div class="form-group">
+								<div class="row">
+									<div class="col-md-3">
+										<label class="control-label w-100">User:</label>
+									</div>
+									<div class="col-md-8">
+										<input type="text" class="form-control decimales" id="cantidad_adeudada" placeholder="cantidad">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row">
+									<div class="col-md-3">
+										<label class="control-label w-100">Password:</label>
+									</div>
+									<div class="col-md-8">
+										<input type="password" class="form-control" id="cantidad_adeudada" placeholder="password">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row">
+									<div class="col-md-3">
+										<label class="control-label w-100">Email:</label>
+									</div>
+									<div class="col-md-8">
+										<input type="inputEmail" class="form-control" id="cantidad_adeudada" placeholder="email">
+									</div>
+								</div>
+							</div>
+							<div class="form-horizontal">
+								<div class="form-group">
+									<div class="row">
+										<div class="col-md-3">
+											<label class="control-label w-100">Rol:</label>
+										</div>
+										<div class="col-md-8">
+											<select id="programa" name="programa" class="form-control select-2">
+												<option value='-1'>Select a rol</option>
+													<option value='2' selected>Normal</option><!-- Solo habra un solo rol para registrar, el manager ya esta creado -->
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+							<button type="button" class="btn btn-success" id="registrar_btn">Registrar</button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+		</div>
+	</div>
+	{{> footer }}
+</body>
+</html>
