@@ -26,18 +26,18 @@
 				<div class="col-md-6">
 					<form class="form-signin" th:action="@{/j_spring_security_check}" method="post">
 						<div class="title text-center">
-							<h3>Acceso usuarios</h3>
+							<h3>Access to users</h3>
 						</div>
 						<label for="inputEmail" class="sr-only">Direcci&oacute;n de correo</label> <input type="email" name='j_username' id="inputEmail" class="form-control" placeholder="Direcci&oacute;n de correo" required="required"> <label for="inputPassword" class="sr-only">Contrase&ntilde;a</label>
 						<input type="password" name='j_password' id="inputPassword" class="form-control" placeholder="Contrase&ntilde;a" required="required">
 						<div class="checkbox"></div>
-						<button class="btn btn-success btn-block" type="submit">Iniciar sesi&oacute;n</button>
+						<button class="btn btn-success btn-block" type="submit">Login</button>
 					</form>
 
 					<div class="clearfix"></div>
 					<div class="text-center">
 						<p>
-							<a data-toggle="modal" data-target="#myModal" class="text-center">&iquest;No tienes cuenta? Favor de crear una</a>
+							<a data-toggle="modal" data-target="#myModal" class="text-center">&iquest;Do you dont have an account? plase, register here</a>
 						</p>
 					</div>
 					<div class="clearfix"></div>
@@ -73,7 +73,7 @@
 			</div>
 
 			<div class="center-block text-center">
-				<a href="#"><button class="btn btn-info" id="btn_register">Register</button></a>
+				<a href="#"><button class="btn btn-info" id="btn_register">Sign in</button></a>
 				<div class="col-lg-12 text-center"></div>
 			</div>
 
@@ -85,7 +85,7 @@
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
-							<h3 class="modal-title title text-center" id="">Usuarios externos</h3>
+							<h3 class="modal-title title text-center" id="">Register form</h3>
 						</div>
 						<div class="modal-body">
 							<div class="form-group">
@@ -94,7 +94,7 @@
 										<label class="control-label w-100">User:</label>
 									</div>
 									<div class="col-md-8">
-										<input type="text" class="form-control decimales" id="cantidad_adeudada" placeholder="cantidad">
+										<input type="text" class="form-control decimales" id="user" placeholder="user name">
 									</div>
 								</div>
 							</div>
@@ -104,7 +104,7 @@
 										<label class="control-label w-100">Password:</label>
 									</div>
 									<div class="col-md-8">
-										<input type="password" class="form-control" id="cantidad_adeudada" placeholder="password">
+										<input type="password" class="form-control" id="password" placeholder="password">
 									</div>
 								</div>
 							</div>
@@ -135,8 +135,8 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-							<button type="button" class="btn btn-success" id="registrar_btn">Registrar</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-success" id="registrar_btn">Register</button>
 						</div>
 					</div>
 					<!-- /.modal-content -->
@@ -145,6 +145,21 @@
 			</div>
 		</div>
 	</div>
-	{{> footer }}
+	<footer class="footer" id="footer_login">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-md-6 col-sm-6">
+	        <p class="small text-left">
+	        Adriana Zazueta Carrillo
+	        </p>
+	      </div>
+	      <div class="col-md-6 col-sm-6">
+	        <p class="small text-right">
+	          Comments:<a href="mailto:adriana.zazueta@uabc.edu.mx"> adriana.zazueta@uabc.edu.mx</a>
+	        </p>
+	      </div>
+	    </div>
+	  </div>
+	</footer>
 </body>
 </html>
